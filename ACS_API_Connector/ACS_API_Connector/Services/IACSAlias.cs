@@ -8,8 +8,8 @@ namespace ACS_API_Connector.Services
 {
     public interface IACSAlias
     {
-        Task<ACSResponceModel> ACSAutoRestHelp(ACSRequestModel request);
-        Task<ACSResponceModel> ACSCreateVoucher(ACSRequestModel request);
-        Task<ACSResponceModel> ACSGetMultipartVoucher(ACSRequestModel request);
+        Task<string> ACSAutoRestHelp(ACSRequestModel request);
+        Task<List<VoucherModel>> ACSCreateVoucher(ACSRequestModel request);
+        Task<List<MultipartVouchersModel>> ACSGetMultipartVoucher(ACSRequestModel request);
     }
 }

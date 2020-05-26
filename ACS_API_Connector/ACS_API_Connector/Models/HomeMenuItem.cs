@@ -8,7 +8,8 @@ namespace ACS_API_Connector.Models
     {
         Browse,
         About,
-        Voucher
+        Voucher,
+        MultipartVouchers
     }
     public class HomeMenuItem
     {

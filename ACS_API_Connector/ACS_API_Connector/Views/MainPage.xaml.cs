@@ -39,6 +39,9 @@ namespace ACS_API_Connector.Views
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
                         break;
+                    case (int)MenuItemType.MultipartVouchers:
+                        MenuPages.Add(id, new NavigationPage(new MultiparVouchersPage()));
+                        break;
                 }
             }
 

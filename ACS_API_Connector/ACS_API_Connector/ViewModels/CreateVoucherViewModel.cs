@@ -7,6 +7,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using System.Diagnostics;
 using ACS_API_Connector.Views;
+using System.Collections.Generic;
 
 namespace ACS_API_Connector.ViewModels
 {
@@ -59,21 +60,23 @@ namespace ACS_API_Connector.ViewModels
             get { return errormessage; }
         }
 
+
         private async void CreateVoucher() {
             inputParam.Company_ID = "998099182";
             inputParam.Company_Password = "3408";
             inputParam.User_ID = "suser";
             inputParam.User_Password = "3408";
-            inputParam.Pickup_Date = new DateFormatHandling();
+            inputParam.Pickup_Date = "2020-05-26";
             inputParam.Recipient_Name = "VP";
             inputParam.Recipient_Address = "afas";
             inputParam.Recipient_Zipcode = 56123;
             inputParam.Recipient_Country = "GR";
             inputParam.Billing_Code = "2ΘΩ343608";
             inputParam.Charge_Type = 2;
+            inputParam.Main_Voucher_No = "7228174940";
 
-            ACSRequestModel Voucher = new ACSRequestModel(inputParam);
-            ACSResponceModel responce = await ACSAlias.ACSCreateVoucher(Voucher);
+            ACSRequestModel VoucherRequest = new ACSRequestModel(inputParam);
+            List<VoucherModel> VoucherList = await ACSAlias.ACSCreateVoucher(VoucherRequest);
         }
         public ICommand Request { set; get;}
     }

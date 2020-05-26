@@ -22,7 +22,8 @@ namespace ACS_API_Connector.Views
             {
                 new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" },
-                new HomeMenuItem {Id = MenuItemType.Voucher, Title="Voucher"}
+                new HomeMenuItem {Id = MenuItemType.Voucher, Title="Voucher"},
+                new HomeMenuItem {Id = MenuItemType.MultipartVouchers, Title="Multipart Vouchers" }
             };
 
             ListViewMenu.ItemsSource = menuItems;

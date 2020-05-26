@@ -24,7 +24,7 @@ namespace ACS_API_Connector.Models
         public string? User_Password { get; set; }
 
         [Timestamp]
-        public DateFormatHandling Pickup_Date { get; set; }
+        public string? Pickup_Date { get; set; }
 
 
         public string? Sender { get; set; }
@@ -34,6 +34,8 @@ namespace ACS_API_Connector.Models
         public int? Recipient_Address_Number { get; set; }
         public int? Recipient_Zipcode { get; set; }
         public string? Recipient_Region { get; set; }
+
+        [Phone]
         public int? Recipient_Phone { get; set; }
         public int? Recipient_Cell_Phone { get; set; }
         public int? Recipient_Floor { get; set; }
@@ -46,6 +48,8 @@ namespace ACS_API_Connector.Models
         public double? Dimension_X_In_Cm { get; set; }
         public double? Dimension_Y_In_Cm { get; set; }
         public double? Dimension_Z_In_Cm { get; set; }
+
+        public string Main_Voucher_No { get; set; }
 
         public int? Item_Quantity { get; set; }
 
