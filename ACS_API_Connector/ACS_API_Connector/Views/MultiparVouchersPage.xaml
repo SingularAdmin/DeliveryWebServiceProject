@@ -5,24 +5,28 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ACS_API_Connector.Views.MultiparVouchersPage">
-    <ContentPage.Content>
-        <RefreshView IsRefreshing="{Binding IsBusy, Mode=TwoWay}" Command="{Binding Request}">
-            <CollectionView x:Name="ItemsCollectionView"
-                ItemsSource="{Binding multipartVouchers}">
 
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout Padding="10">
-                            <Label Text="{Binding MultiPart_Voucher_No}" 
-                                d:Text="{Binding .}"
-                                LineBreakMode="NoWrap" 
-                                Style="{DynamicResource ListItemTextStyle}" 
-                                FontSize="16" />
-                        </StackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </RefreshView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Main Voucher" HorizontalOptions="Center"></Label>
+            <Entry Text="{Binding MainVoucherNo}"></Entry>
+            <RefreshView IsRefreshing="{Binding IsBusy, Mode=TwoWay}" Command="{Binding Request}">
+                <CollectionView x:Name="ItemsCollectionView"
+                    ItemsSource="{Binding multipartVouchers}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding MultiPart_Voucher_No}" 
+                                    d:Text="{Binding .}"
+                                    LineBreakMode="NoWrap" 
+                                    Style="{DynamicResource ListItemTextStyle}" 
+                                    FontSize="16" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+        </StackLayout>
     </ContentPage.Content>
 
 </ContentPage>

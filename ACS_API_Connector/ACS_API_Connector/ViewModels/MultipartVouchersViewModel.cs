@@ -17,7 +17,7 @@ namespace ACS_API_Connector.ViewModels
         public ObservableCollection<MultipartVouchersModel> multipartVouchers { get; set; }
         private readonly ACSInputParameters inputParam;
         public ICommand Request { set; get; }
-
+        public ICommand SubmitMainVoucher { get; set; }
         public MultipartVouchersViewModel()
         {
             inputParam = new ACSInputParameters();
@@ -38,16 +38,16 @@ namespace ACS_API_Connector.ViewModels
             try
             {
                 multipartVouchers.Clear();
-                inputParam.Company_ID = "998099182";
-                inputParam.Company_Password = "3408";
-                inputParam.User_ID = "suser";
-                inputParam.User_Password = "3408";
+                inputParam.Company_ID = "";
+                inputParam.Company_Password = "";
+                inputParam.User_ID = "";
+                inputParam.User_Password = "";
                 inputParam.Pickup_Date = "2020-05-26";
                 inputParam.Recipient_Name = "VP";
                 inputParam.Recipient_Address = "afas";
                 inputParam.Recipient_Zipcode = 56123;
                 inputParam.Recipient_Country = "GR";
-                inputParam.Billing_Code = "2ΘΩ343608";
+                inputParam.Billing_Code = "";
                 inputParam.Charge_Type = 2;
                 inputParam.Main_Voucher_No = "7228174940";
 
